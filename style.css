@@ -254,8 +254,9 @@ section{
 #profile{
     justify-content: center;
     gap: 5rem;
-    height: 72vh;
     align-items: center;
+    padding-bottom: 20vh;
+    
 }
 
 .section__pic-container{
@@ -273,7 +274,7 @@ section{
 }
 
 .section_text{
-    /* margin-top: 21vh; */
+
 }
 
 .section_text p{
@@ -405,6 +406,7 @@ section{
 
 }
 .project-info{
+    display: inline-block;
     align-items: center;
     justify-content: center;
 }
