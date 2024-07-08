@@ -36,6 +36,16 @@ function setTheme(){
 }
 
 function setDarkMode(){
+    var buttons = document.querySelectorAll('.btn');
+    buttons.forEach(function(button) {
+        button.style.transition = 'none';
+    });
+
+    var menulinks = document.querySelectorAll('.menu-links')
+    menulinks.forEach(function(menulink){
+        menulink.style.transition = 'none';
+    });
+
     document.body.setAttribute("theme", "dark");
     localStorage.setItem("theme","dark");
 
@@ -50,8 +60,28 @@ function setDarkMode(){
             image.classList.toggle('inverted')
         }
     
+    
+    document.body.offsetHeight;
+
+    buttons.forEach(function(button) {
+        button.style.transition = 'all 300ms ease';
+    });
+
+    menulinks.forEach(function(menulink){
+        menulink.style.transition = 'all 0.55s ease-in-out';
+    });
+    
 };
 function setLightMode(){
+    var buttons = document.querySelectorAll('.btn');
+    buttons.forEach(function(button) {
+        button.style.transition = 'none';
+    });
+
+    var menulinks = document.querySelectorAll('.menu-links')
+    menulinks.forEach(function(menulink){
+        menulink.style.transition = 'none';
+    });
     document.body.removeAttribute("theme");
     localStorage.setItem("theme","light");
 
@@ -63,6 +93,15 @@ function setLightMode(){
         {
             image.classList.toggle('inverted')
         }
+
+    document.body.offsetHeight;
+    buttons.forEach(function(button) {
+        button.style.transition = 'all 300ms ease';
+    });
+
+    menulinks.forEach(function(menulink){
+        menulink.style.transition = 'all 0.55s ease-in-out';
+    });
 };
 
 window.addEventListener('scroll',(e)=>{
@@ -86,4 +125,3 @@ window.addEventListener('scroll',(e)=>{
 //     var image = document.getElementById("profile-pic");
 //     image.classList.toggle('inverted');
 // });
-
